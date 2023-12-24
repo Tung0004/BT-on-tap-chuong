@@ -1,0 +1,15 @@
+{
+    "company_info": {
+      "company_name": "Công ty TNHH Đất Việt",
+      "company_address": "abc Giải Phóng – Hà Nội.",
+      "total_employees": 100
+    },
+    "departments": [
+      {"department_name": "Đơn vị A1", "num_employees": 20},
+      {"department_name": "Đơn vị A2", "num_employees": 15},
+      {"department_name": "Đơn vị A3", "num_employees": 25},
+      {"department_name": "Đơn vị A4", "num_employees": 30},
+      {"department_name": "Đơn vị A5", "num_employees": 10}
+    ]
+  }
+  
