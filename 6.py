@@ -1,8 +1,8 @@
-import json
-file_json = input()
-# Đọc từ tệp JSON
-with open(file_json, 'r') as file:
-    python_object = json.load(file)
-
-# In đối tượng Python
-print("Đối tượng Python:", python_object)
+import sqlite3
+conn = sqlite3.connect('mydatabase3.db')
+cursor = conn.cursor()
+cursor.execute("select count(ID)from USERS")
+rows = cursor.fetchall()[0]
+for row in rows:
+    print(row)
+conn.close()

@@ -1,22 +1,11 @@
-import json
-
-# Đối tượng Python mẫu (dictionary)
-python_object = {
-    "name": "John",
-    "age": 30,
-    "city": "New York",
-    "is_student": False,
-    "grades": [95, 88, 92]
-}
-
-# Chuyển đối tượng Python thành chuỗi JSON
-json_data = json.dumps(python_object, indent=2)
-
-# In ra chuỗi JSON
-print("Chuỗi JSON:")
-print(json_data)
-
-# In ra tất cả các giá trị
-print("\nTất cả các giá trị:")
-for key, value in json.loads(json_data).items():
-    print(f"{key}: {value}")
+import sqlite3
+#Viết chương trình Python để cập nhất tất cả các giá trị của một cột cụ thể trong bảng SQLite 'mydatevasse.db'  
+conn = sqlite3.connect('mydatabase3.db')
+cursor = conn.cursor()
+cursor.execute("UPDATE USERS SET Tuổi = 40")
+conn.commit()
+cursor.execute("SELECT * FROM USERS")
+rows = cursor.fetchall()
+for row in rows:
+    print(row)
+conn.close()
